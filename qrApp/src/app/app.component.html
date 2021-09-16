@@ -1,6 +1,91 @@
 
-<h2>QR so beatiful! Check this out!</h2>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">QR APP</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.remotestack.io/angular-qr-code-generator-tutorial-with-example/" target="_blank">More QR's</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<div>
+<h2 class="m-3">QR so beatiful! Check this out!</h2>
+<hr>
+
+<div class="m-3">
   <qr-code [value]="qrInfo" [size]="350"></qr-code>
+</div>
+
+<div class="row m-3">
+  <div class="col m3">
+
+    
+<label>
+  <div class="input-group">
+  <span class="input-group-text">Change name</span>
+  <input type="text" [(ngModel)]="values" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+ 
+</label>
+
+<br />
+<br />
+<br />
+
+<strong>Change to</strong>:
+<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+<button class="btn btn-danger"
+        (click)="qrData('Monica Rambeau')">Monica Rambeau</button>
+<button class="btn btn-warning"
+        (click)="qrData('Nosy Neighbor')">Nosy Neighbor</button>
+<button class="btn btn-success"
+        (click)="qrData('Mephisto')"> Mephisto</button>
+</div>
+
+<br />
+<br />
+<br />
+
+<strong>Change Width</strong>:
+<div class="btn-group" role="group" aria-label="Button group">
+<button class="btn btn-outline-primary"
+        (click)="qrWidth(550)">550</button>
+<button class="btn btn-outline-primary"
+        (click)="qrWidth(450)">450</button>
+<button class="btn btn-outline-primary"
+        (click)="qrWidth(350)">350</button>
+<button class="btn btn-outline-primary"
+        (click)="qrWidth(250)">250</button>
+  
+</div>
+
+
+<br />
+<br />
+<br />
+
+<strong>Update Level</strong>:
+<div class="btn-group me-2" role="group" aria-label="First group">
+<button (click)="qrLevel('L')"
+        class="btn btn-outline-secondary">L</button>
+<button (click)="qrLevel('M')"
+        class="btn btn-outline-secondary">M</button>
+<button (click)="qrLevel('Q')"
+        class="btn btn-outline-secondary">Q</button>
+<button (click)="qrLevel('H')"
+        class="btn btn-outline-secondary">H</button>
+</div>
+  </div>
 </div>
