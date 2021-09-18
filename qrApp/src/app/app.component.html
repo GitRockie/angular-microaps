@@ -23,7 +23,7 @@
 
 <h2 class="m-3">QR so beatiful! Check this out!</h2>
 <hr>
-
+<div class="container ms-5">
 <div class="m-3">
   <qr-code [value]="qrInfo" [size]="350"></qr-code>
 </div>
@@ -42,10 +42,10 @@
 
 <br />
 <br />
-<br />
 
-<strong>Change to</strong>:
-<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+
+<strong>Change to</strong>:<br><br>
+<div class="btn-group mb-3" role="group" aria-label="Basic mixed styles example">
 <button class="btn btn-danger"
         (click)="qrData('Monica Rambeau')">Monica Rambeau</button>
 <button class="btn btn-warning"
@@ -53,13 +53,23 @@
 <button class="btn btn-success"
         (click)="qrData('Mephisto')"> Mephisto</button>
 </div>
-
-<br />
 <br />
 <br />
 
-<strong>Change Width</strong>:
-<div class="btn-group" role="group" aria-label="Button group">
+<label>
+  <div class="input-group mt-3">
+  <span class="input-group-text">Change width</span>
+  <input type="text" [(ngModel)]="width" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+ 
+</label>
+
+<br />
+<br />
+
+
+<strong>Change to</strong>:<br><br>
+<div class="btn-group mb-4" role="group" aria-label="Button group">
 <button class="btn btn-outline-primary"
         (click)="qrWidth(550)">550</button>
 <button class="btn btn-outline-primary"
@@ -74,9 +84,19 @@
 
 <br />
 <br />
-<br />
+<label>
+  <div class="input-group mt-3">
+  <span class="input-group-text">Update to:</span>
+  <input type="text" [(ngModel)]="level" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+</div>
 
-<strong>Update Level</strong>:
+ 
+</label>
+
+
+<br />
+<br />
+<strong>Update Level</strong>:<br><br>
 <div class="btn-group me-2" role="group" aria-label="First group">
 <button (click)="qrLevel('L')"
         class="btn btn-outline-secondary">L</button>
@@ -88,4 +108,12 @@
         class="btn btn-outline-secondary">H</button>
 </div>
   </div>
+  <div class="row mt-5 mb-5">
+    <div class="col">
+      <button (click)="createQR()"
+          class="btn btn-primary float-start">Generate new QR</button>
+    </div>
+  </div>
+</div>
+
 </div>

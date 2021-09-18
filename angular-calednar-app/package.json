@@ -21,6 +21,12 @@
     "@fullcalendar/angular": "^5.9.0",
     "@fullcalendar/daygrid": "^5.9.0",
     "@fullcalendar/interaction": "^5.9.0",
+    "@fullcalendar/list": "^5.9.0",
+    "@fullcalendar/timegrid": "^5.9.0",
+    "fullcalendar": "^5.9.0",
+    "jquery": "^3.6.0",
+    "list": "^2.0.19",
+    "moment": "^2.29.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

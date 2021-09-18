@@ -40,5 +40,10 @@ export class AppComponent {
     this.width = val;
   }
 
+  createQR() {
+    console.log('QR code was successfuly generated!');
+
+  }
+
 
 }
