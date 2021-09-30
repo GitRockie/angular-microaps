@@ -7,43 +7,41 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public values: string | null;
+  public qrCodeVal: string;
   public level: 'L'| 'M' | 'Q' | 'H';
   public width: number;
 
 
   constructor() {
     this.level = 'L';
-    this.values = 'QR code string value';
+    this.qrCodeVal = 'QR code string value';
     this.width = 200;
   }
  
   //Creamos data para QR
-  item = [{
+  data = [{
     'name': 'Agatha Harkness',
     'played by': 'Kathryn Hahn',
     'Fictional universe': 'Marvel Universe',
     'Creator': 'Stan Lee'
   }]
 
-  qrInfo = JSON.stringify(this.item);
+  dataToString = JSON.stringify(this.data);
 
-  qrLevel(val: "L" | "M" | "Q" | "H") {
-    this.level = val;
+  
+
+  updateLevel(newValue: "L" | "M" | "Q" | "H") {
+    this.level = newValue;
   }
 
-  qrData(val: string) {
-    this.values = val;
+  updateQrInfo(newValue: string) {
+    this.qrCodeVal = newValue;
   }
 
-  qrWidth(val: number) {
-    this.width = val;
+  updateWidth(newValue: number) {
+    this.width = newValue;
   }
 
-  createQR() {
-    console.log('QR code was successfuly generated!');
-
-  }
 
 
 }
